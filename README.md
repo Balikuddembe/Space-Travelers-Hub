@@ -6,7 +6,7 @@
 
 ## Screenshots:
 
-![screenshot](./src/images/Screenshot_rockets.png)
+![screenshot](./src/Images/Screenshot_rockets.png)
 
 ![screenshot](./src/Images/Screenshot_missions.png)
 
