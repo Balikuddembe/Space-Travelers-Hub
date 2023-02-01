@@ -1,13 +1,26 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const GET = 'space-travelers-hub/rocketsReducer/GET';
+const BOOK = 'space-travelers-hub/rocketsReducer/BOOK';
+
+// Book rocket
+const reserveRocket = (state, payload) => {
+  const newstate = state.map((rocket) => {
+    if (rocket.id !== payload) return rocket;
+    return { ...rocket, reserved: !rocket.reserved };
+  });
+  return newstate;
+};
 
 //  Reducer
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case `${GET}/fulfilled`:
       return action.payload;
-    default: return state;
+    case BOOK:
+      return reserveRocket(state, action.payload);
+    default:
+      return state;
   }
 };
 
@@ -17,11 +30,20 @@ export const getRockets = (payload) => ({
   payload,
 });
 
+export const bookRocket = (payload) => ({
+  type: BOOK,
+  payload,
+});
+
 // API
 export const fetchRockets = createAsyncThunk(GET, async () => {
   const respose = await fetch('https://api.spacexdata.com/v3/rockets');
   const data = await respose.json();
-  return data;
+  const rockets = data.map((rocket) => {
+    const result = rocket.reserved !== undefined;
+    return { ...rocket, reserved: result };
+  });
+  return rockets;
 });
 
 export default rocketsReducer;
