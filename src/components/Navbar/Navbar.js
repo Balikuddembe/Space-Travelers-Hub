@@ -13,7 +13,7 @@ function NavBar() {
       <div className="NavLinks">
         <NavLink to="./Rockets.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Rockets</NavLink>
         <NavLink to="./Missions.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Missions</NavLink>
-        <NavLink to="/Profile.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>My Profile</NavLink>
+        <NavLink to="/" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>My Profile</NavLink>
       </div>
     </div>
   );
