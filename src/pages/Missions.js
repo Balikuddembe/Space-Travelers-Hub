@@ -1,6 +1,6 @@
 const Missions = () => (
   <div className="stat-container">
-    Missiomns
+    Missions
     <p>test</p>
   </div>
 );
