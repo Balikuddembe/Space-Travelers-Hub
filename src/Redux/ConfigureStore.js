@@ -9,4 +9,5 @@ const spaceReducers = combineReducers({
 const store = configureStore({
   reducer: spaceReducers,
 });
+
 export default store;
