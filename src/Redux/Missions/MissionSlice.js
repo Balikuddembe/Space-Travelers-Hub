@@ -1,12 +1,34 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const getMissions = createAsyncThunk(
+export const getMissions = createAsyncThunk(
   'Missions/getMissions', // Action
   async () => {
-    const missions = await fetch('https://api.spacexdata.com/v3/missions');
-    const resp = await missions.json();
-    return resp;
+    const response = await fetch('https://api.spacexdata.com/v3/missions').then((resp) => resp.json());
+
+    const missionsData = response.map((mission) => {
+      const missions = {
+        mission_id: mission.mission_id,
+        mission_name: mission.mission_name,
+        mission_description: mission.description,
+      };
+      return missions;
+    });
+    return missionsData;
   },
 );
 
-export default getMissions;
+const initialState = { loading: false, data: [], error: null };
+
+const missionsSlice = createSlice({
+  name: 'missions',
+  initialState,
+  reducers: {},
+  extraReducers: (Builder) => {
+    Builder.addCase(getMissions.fulfilled, (state, action) => {
+      const x = state;
+      x.data = action.payload;
+    });
+  },
+});
+
+export default missionsSlice.reducer;
