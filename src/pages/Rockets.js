@@ -1,7 +1,9 @@
+import React from 'react';
+import RocketsContainer from '../components/Rockets/RocketsContainer';
+
 const Rockets = () => (
-  <div className="stat-container">
-    Check Status 2
-    <p>test</p>
+  <div>
+    <RocketsContainer />
   </div>
 );
 
