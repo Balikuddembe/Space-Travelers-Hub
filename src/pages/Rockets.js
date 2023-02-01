@@ -3,6 +3,6 @@ const Rockets = () => (
     Check Status 2
     <p>test</p>
   </div>
-)
+);
 
 export default Rockets;

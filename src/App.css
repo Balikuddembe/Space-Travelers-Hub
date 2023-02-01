@@ -15,9 +15,8 @@
 
 .NavLinks {
   display: flex;
-  flex-basis: 50%;
-  display: flex;
   justify-content: flex-end;
+  flex-basis: 50%;
   padding-right: 3%;
 }
 
@@ -42,7 +41,7 @@ a:hover {
   color: #f00;
 }
 
-.currentPage{
+.currentPage {
   color: #f00;
   text-decoration: underline;
 }
