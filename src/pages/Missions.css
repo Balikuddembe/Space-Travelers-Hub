@@ -87,6 +87,7 @@ tbody > tr:nth-child(odd) {
   width: 90%;
   margin-left: 5%;
 }
+
 .activeStatus {
   border-radius: 5px;
   background-color: rgb(64, 179, 224);
