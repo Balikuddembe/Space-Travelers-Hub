@@ -5,12 +5,8 @@ import { bookRocket } from '../../Redux/Rockets/RocketsSlice';
 
 const Rocket = (props) => {
   const {
-    id, name, description, image,
+    id, name, description, image, reserved,
   } = props;
-  let { reserved } = props;
-  if (reserved === undefined) {
-    reserved = false;
-  }
   const dispatch = useDispatch();
   const reserveRocket = () => {
     dispatch(bookRocket(id));
@@ -29,11 +25,10 @@ const Rocket = (props) => {
           {' '}
           {description}
         </p>
-
         {!reserved ? (
-          <button type="button" className="rocket-reserve-btn" onClick={reserveRocket}>Reserve Rocket</button>
+          <button type="button" className="rocket-reserve-btn" onClick={reserveRocket} data-testid="button-up">Reserve Rocket</button>
         ) : (
-          <button type="button" className="rocket-cancel-btn" onClick={reserveRocket}>Cancel Reserve</button>
+          <button type="button" className="rocket-cancel-btn" onClick={reserveRocket} data-testid="button-cancel">Cancel Reserve</button>
         )}
       </div>
     </div>
