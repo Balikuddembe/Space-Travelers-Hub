@@ -8,7 +8,7 @@ function NavBar() {
     <div className="NavBar">
       <div className="LogoContainer">
         <img className="planet" src={Logo} alt="" />
-        <h1>Traverlers Hub</h1>
+        <h1>Space Traverlers Hub</h1>
       </div>
       <div className="NavLinks">
         <NavLink to="./Rockets.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Rockets</NavLink>

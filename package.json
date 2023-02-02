@@ -25,8 +25,8 @@
     "eject": "react-scripts eject",
     "el": "eslint .",
     "sl": "stylelint \"**/*.{css,scss}\"",
-    "elf": "eslint .--fix",
-    "slf": "stylelint \"**/*.{css,scss}\"--fix"
+    "elf": "eslint . --fix",
+    "slf": "stylelint \"**/*.{css,scss}\" --fix"
   },
   "eslintConfig": {
     "extends": [

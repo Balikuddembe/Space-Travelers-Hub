@@ -6,6 +6,10 @@
   border-bottom: 3px solid #f4f5f0;
 }
 
+.NavBar h1 {
+  margin-left: 1em;
+}
+
 .LogoContainer {
   display: flex;
   align-items: center;

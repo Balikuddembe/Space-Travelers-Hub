@@ -19,6 +19,7 @@
 - JavaScript
 - REACT
 - Redux
+- Redux-Toolkit (RTK)
 - Webpack
 - Jest
 
@@ -65,7 +66,6 @@ npm start
 ```bash
 npm run test
 ```
-
 
 ## Visit And Open Files
 
