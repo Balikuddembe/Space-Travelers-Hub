@@ -22,6 +22,7 @@
 - Redux-Toolkit (RTK)
 - Webpack
 - Jest
+- RTK
 
 ## Online live link
 
