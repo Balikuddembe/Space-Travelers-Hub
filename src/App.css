@@ -27,7 +27,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #3591ff;
   font-size: 1.2rem;
   align-items: center;
   padding: 0 15px 0 15px;
@@ -37,12 +37,8 @@ a:nth-child(2) {
   border-right: 1px solid black;
 }
 
-a:hover {
-  color: #f00;
-}
-
 .currentPage {
-  color: #f00;
+  color: #3591ff;
   text-decoration: underline;
 }
 
@@ -77,9 +73,17 @@ a:hover {
   height: 210px;
 }
 
+.rocket-badge {
+  background-color: rgb(33, 177, 182);
+  color: #fff;
+  padding: 3px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
 .rocket-cancel-btn,
 .rocket-reserve-btn {
-  border: none;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
@@ -93,4 +97,10 @@ a:hover {
   background-color: #0290ff;
   color: #fff;
   border: none;
+}
+
+.rocket-cancel-btn {
+  background-color: white;
+  border: 1px solid #6c757e;
+  color: #6c757e;
 }
