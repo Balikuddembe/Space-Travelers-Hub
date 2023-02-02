@@ -1,7 +1,9 @@
+import React from 'react';
+import RocketsProfile from '../components/Profile/RocketsProfile';
+
 const MyProfile = () => (
-  <div className="stat-container">
-    MiyProfile
-    <p>test</p>
+  <div className="profile-container">
+    <RocketsProfile />
   </div>
 );
 

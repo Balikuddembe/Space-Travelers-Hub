@@ -108,3 +108,31 @@ a:nth-child(2) {
   border: 1px solid #6c757e;
   color: #6c757e;
 }
+
+.profile-container {
+  display: flex;
+  margin: 40px;
+}
+
+.profile-rockets-title {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.reserve-container {
+  width: 45%;
+}
+
+.profile-rockets {
+  border: 1.5px solid #e8e8e8;
+}
+
+.reserve-item {
+  border-bottom: 1.5px solid #e8e8e8;
+  padding: 15px;
+}
+
+.no-reserve {
+  padding: 15px;
+  margin: 0;
+}

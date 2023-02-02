@@ -16,14 +16,19 @@ const reserveRocket = (state, payload) => {
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case `${GET}/fulfilled`:
-      return action.payload;
+      return Object.keys(action.payload).map((key) => ({
+        id: action.payload[key].id,
+        rocket_name: action.payload[key].rocket_name,
+        description: action.payload[key].description,
+        flickr_images: action.payload[key].flickr_images[0],
+        reserved: false,
+      }));
     case BOOK:
       return reserveRocket(state, action.payload);
     default:
       return state;
   }
 };
-
 // Action creator
 export const getRockets = (payload) => ({
   type: GET,
