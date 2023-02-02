@@ -1,4 +1,4 @@
-#table-container {
+#missions-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -26,19 +26,19 @@ tbody > tr:nth-child(odd) {
   background-color: rgba(191, 191, 191, 0.514);
 }
 
-.description {
-  width: 70%;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 .mission {
   width: 10%;
   padding-left: 5px;
 }
 
+.description {
+  width: 64%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .statusContainer {
-  width: 10%;
+  width: 12%;
 }
 
 .status {
@@ -53,12 +53,17 @@ tbody > tr:nth-child(odd) {
   padding: 2px;
 }
 
+.joinContainer {
+  width: 30%;
+}
+
 .joinBtn {
   margin-left: 15%;
   width: 70%;
   padding: 5px;
   background-color: transparent;
   cursor: pointer;
+  border-color: rgb(12, 245, 101);
 }
 
 .leaveBtn {
@@ -69,4 +74,26 @@ tbody > tr:nth-child(odd) {
   cursor: pointer;
   border: 2px solid red;
   color: red;
+}
+
+/* Not in App.js. Here better */
+
+.joinStatus {
+  border-radius: 5px;
+  background-color: rgb(128, 128, 128);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  width: 90%;
+  margin-left: 5%;
+}
+.activeStatus {
+  border-radius: 5px;
+  background-color: rgb(64, 179, 224);
+  width: 90%;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5%;
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-import './Missions.css';
+import '../Styles/Missions.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getMissions, joinMission } from '../Redux/Missions/MissionSlice';
@@ -21,15 +21,16 @@ const Missions = () => {
   const joinBtn = (state) => (state === true ? { display: 'none' } : { display: 'block' });
 
   const leaveBtn = (state) => (state === true ? { display: 'block' } : { display: 'none' });
+
   return (
-    <div id="missions-container">
+    <div id="table-container">
       <table className="missions-table">
         <thead>
           <tr>
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th>{' '}</th>
+            <th />
           </tr>
         </thead>
         <tbody>
@@ -44,7 +45,7 @@ const Missions = () => {
               </td>
               <td className="description">
                 {' '}
-                { mission.mission_description }
+                { mission.description }
                 {' '}
               </td>
               <td className="statusContainer">
@@ -53,7 +54,6 @@ const Missions = () => {
               </td>
               <td className="joinContainer">
                 <button
-                  type="button"
                   className="joinBtn"
                   id={mission.mission_id}
                   onClick={() => handleJoin(mission.mission_id, mission.reserved)}
@@ -62,7 +62,6 @@ const Missions = () => {
                   Join Mission
                 </button>
                 <button
-                  type="button"
                   className="leaveBtn"
                   id={mission.mission_id}
                   onClick={() => handleJoin(mission.mission_id)}
