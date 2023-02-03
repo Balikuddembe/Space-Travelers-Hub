@@ -111,7 +111,8 @@ a:nth-child(2) {
 
 .profile-container {
   display: flex;
-  margin: 40px;
+  margin: 30px;
+  gap: 3vw;
 }
 
 .profile-rockets-title {
