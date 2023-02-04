@@ -11,9 +11,9 @@ function NavBar() {
         <h1>Space Traverlers Hub</h1>
       </div>
       <div className="NavLinks">
-        <NavLink to="./Rockets.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Rockets</NavLink>
-        <NavLink to="./Missions.js" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Missions</NavLink>
-        <NavLink to="/" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>My Profile</NavLink>
+        <NavLink to="/" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Rockets</NavLink>
+        <NavLink to="./Missions" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>Missions</NavLink>
+        <NavLink to="./MyProfile" end className={({ isActive }) => (isActive ? 'currentPage' : undefined)}>My Profile</NavLink>
       </div>
     </div>
   );
