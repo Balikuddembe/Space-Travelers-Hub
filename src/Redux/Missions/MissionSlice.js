@@ -28,10 +28,7 @@ const missionsSlice = createSlice({
       const newMissions = [];
       state.data.map((mission) => {
         if (mission.mission_id === payload) {
-          newMissions.push({
-            ...mission,
-            reserved: !mission.reserved,
-          });
+          newMissions.push({ ...mission, reserved: true });
         } else {
           newMissions.push(mission);
         }
@@ -43,10 +40,7 @@ const missionsSlice = createSlice({
       const newMissions = [];
       state.data.map((mission) => {
         if (mission.mission_id === payload) {
-          newMissions.push({
-            ...mission,
-            reserved: !mission.reserved,
-          });
+          newMissions.push({ ...mission, reserved: false });
         } else {
           newMissions.push(mission);
         }
