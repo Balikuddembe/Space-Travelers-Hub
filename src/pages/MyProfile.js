@@ -3,10 +3,10 @@ import RocketsProfile from '../components/Profile/RocketsProfile';
 import MissionsProfile from '../components/Profile/MissionsProfile';
 
 const MyProfile = () => (
-  <div className="profile-container">
+  <section className="profile-container">
     <RocketsProfile />
     <MissionsProfile />
-  </div>
+  </section>
 );
 
 export default MyProfile;
