@@ -28,10 +28,19 @@ const missionsSlice = createSlice({
       const newMissions = [];
       state.data.map((mission) => {
         if (mission.mission_id === payload) {
-          newMissions.push({
-            ...mission,
-            reserved: !mission.reserved,
-          });
+          newMissions.push({ ...mission, reserved: true });
+        } else {
+          newMissions.push(mission);
+        }
+        return newMissions;
+      });
+      return { ...state, data: newMissions };
+    },
+    leaveMission(state, { payload }) {
+      const newMissions = [];
+      state.data.map((mission) => {
+        if (mission.mission_id === payload) {
+          newMissions.push({ ...mission, reserved: false });
         } else {
           newMissions.push(mission);
         }
@@ -57,4 +66,4 @@ const missionsSlice = createSlice({
 });
 
 export default missionsSlice.reducer;
-export const { joinMission } = missionsSlice.actions;
+export const { joinMission, leaveMission } = missionsSlice.actions;

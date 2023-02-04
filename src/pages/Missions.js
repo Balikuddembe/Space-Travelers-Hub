@@ -1,7 +1,7 @@
 import './Missions.css';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getMissions, joinMission } from '../Redux/Missions/MissionSlice';
+import { getMissions, joinMission, leaveMission } from '../Redux/Missions/MissionSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -18,11 +18,15 @@ const Missions = () => {
     dispatch(joinMission(id));
   };
 
+  const handleLeave = async (id) => {
+    dispatch(leaveMission(id));
+  };
+
   const joinBtn = (state) => (state === true ? { display: 'none' } : { display: 'block' });
 
   const leaveBtn = (state) => (state === true ? { display: 'block' } : { display: 'none' });
   return (
-    <div id="missions-container">
+    <section id="missions-container">
       <table className="missions-table">
         <thead>
           <tr>
@@ -65,7 +69,7 @@ const Missions = () => {
                   type="button"
                   className="leaveBtn"
                   id={mission.mission_id}
-                  onClick={() => handleJoin(mission.mission_id)}
+                  onClick={() => handleLeave(mission.mission_id)}
                   style={leaveBtn(mission.reserved)}
                 >
                   Leave Mission
@@ -75,7 +79,7 @@ const Missions = () => {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 };
 

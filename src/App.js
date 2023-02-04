@@ -14,9 +14,9 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <Routes>
-          <Route path="/Rockets.js" element={<Rockets />} />
-          <Route path="/Missions.js" element={<Missions />} />
-          <Route path="/" element={<MyProfile />} />
+          <Route path="/MyProfile" element={<MyProfile />} />
+          <Route path="/Missions" element={<Missions />} />
+          <Route path="/" element={<Rockets />} />
         </Routes>
       </Provider>
     </div>
