@@ -6,7 +6,7 @@ const RocketsProfile = () => {
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
   return (
     <div className="reserve-container">
-      <h1 className="profile-rockets-title">My Rockets</h1>
+      <h2 className="profile-rockets-title">My Rockets</h2>
       <div className="profile-rockets">
         {reservedRockets.length === 0 && <p className="no-reserve">No Rockets Reserved</p>}
         {reservedRockets.map((rocket) => (

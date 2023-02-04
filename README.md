@@ -25,7 +25,7 @@
 
 ## Online live link
 
-[Visit project online](https://space-travelers-xxxxxxxxxxx.netlify.app)
+[coming soon]()
 
 ## Getting Started
 
@@ -80,8 +80,8 @@ npm run test
 👤 **Balikuddembe**
 
 - GitHub: [@githubhandle](https://github.com/Balikuddembe)
-- Twitter: [@twitterhandle](https://twitter.com/Balikuddembe)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/Balikuddembe)
+- Twitter: [@twitterhandle](https://twitter.com/BalixEmma)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuelbalikuddembe/)
 
 👤 **Ivan Martinez von Halle**
 
