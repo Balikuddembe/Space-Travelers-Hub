@@ -11,7 +11,7 @@ const RocketsContainer = () => {
     if (length === 0) {
       dispatch(fetchRockets());
     }
-  }, [dispatch]);
+  }, [dispatch, length]);
   return (
     <div>
       {
